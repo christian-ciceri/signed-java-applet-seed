@@ -8,6 +8,8 @@ public class HelloWorld extends Applet {
   public void stop() {} 
  
   public void paint(Graphics g) {
+      int i=0;
+      System.out.println(i * i);
       g.drawString("Hello World",10,20);
   }
 

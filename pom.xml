@@ -16,6 +16,7 @@
         <project.keyStore>minimal-keystore.jks</project.keyStore>
         <project.password>abcd1234</project.password>
         <project.storetype>jks</project.storetype>
+        <project.alias>minimal</project.alias>
     </properties>
     <profiles>
         <profile>
@@ -24,6 +25,7 @@
                 <project.keyStore>dexeus.p12</project.keyStore>
                 <project.password>dexeusbcn</project.password>
                 <project.storetype>PKCS12</project.storetype>
+                <project.alias>bcn.dexeus.com</project.alias>
             </properties>
         </profile>
     </profiles>
@@ -58,7 +60,7 @@
                 <configuration>
                     <storetype>${project.storetype}</storetype>
                     <keystore>src/main/resources/${project.keyStore}</keystore>
-                    <alias>minimal</alias>
+                    <alias>${project.alias}</alias>
                     <storepass>${project.password}</storepass>
                     <keypass>${project.password}</keypass>
                 </configuration>
