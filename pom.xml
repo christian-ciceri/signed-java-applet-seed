@@ -1,15 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dexeus</groupId>
     <artifactId>dexeus-java-applet</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
     <name>minimal-java-applet-maven</name>
     <url>http://maxven.apache.org</url>
 
+    <scm>
+        <url>http://bindex01/git/dexeus-java-applet</url>
+        <connection>scm:git:http://bindex01/git/dexeus-java-applet</connection>
+    </scm>
+    
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -94,16 +98,16 @@
         </plugins>
     </build>
     <distributionManagement>
-      <repository>
-         <id>release</id>
-         <name>internal</name>
-         <url>http://bindex01:8081/artifactory/libs-release-local</url>
-      </repository>
-      <snapshotRepository>
-         <id>snapshot</id>
-         <name>snapshot</name>
-         <url>http://bindex01:8081/artifactory/libs-snapshot-local/</url>
-      </snapshotRepository>
+        <repository>
+            <id>release</id>
+            <name>internal</name>
+            <url>http://bindex01:8081/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>snapshot</name>
+            <url>http://bindex01:8081/artifactory/libs-snapshot-local/</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
