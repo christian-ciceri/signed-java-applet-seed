@@ -17,6 +17,23 @@
   <build>
     <plugins>
       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>sign</goal>
+                  </goals>
+              </execution>
+          </executions>
+          <configuration>
+              <keystore>src/main/resources/minimal-keystore.jks</keystore>
+              <alias>minimal</alias>
+              <storepass>abcd1234</storepass>
+              <verify>true</verify>
+          </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
