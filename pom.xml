@@ -3,7 +3,7 @@
 
     <groupId>dexeus</groupId>
     <artifactId>dexeus-java-applet</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>chrcic</version>
     <packaging>jar</packaging>
 
     <name>minimal-java-applet-maven</name>
