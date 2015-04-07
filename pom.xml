@@ -93,5 +93,17 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+      <repository>
+         <id>release</id>
+         <name>internal</name>
+         <url>http://bindex01:8081/artifactory/libs-release-local</url>
+      </repository>
+      <snapshotRepository>
+         <id>snapshot</id>
+         <name>snapshot</name>
+         <url>http://bindex01:8081/artifactory/libs-snapshot-local/</url>
+      </snapshotRepository>
+    </distributionManagement>
 
 </project>
