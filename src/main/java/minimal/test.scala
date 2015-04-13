@@ -1,47 +1,20 @@
-package minimal
-
-trait Updatable
-{
-    def update();
-}
-class Generic[T  <: Updatable]
-{
-    def update(obj: T)
-    {
-        obj.update();
-    }
+class UserDAO {
+  def findById(userId: String):User=new User
 }
 
-class UserDAO
-{
+class User() {
+  def isValidated():Boolean=true
+}
 
+class UserService(dao: UserDAO) {
+  //with val as well, the pure composition:
+  def getValidated = dao.findById _ andThen ((_: User).isValidated)    
 }
-trait IUser
-{
-  def isValidated():Boolean;
-}
-class User
-{
-  def isValidated():Boolean=
-  {
-    true
+
+object MainClass {
+  def main(args: Array[String])= {
+    val us = new UserService(new UserDAO)
+    println( us.getValidated("user id") )
   }
 }
-object User
-{}
-class UserService(dao: UserDAO)
-{
-  var dao=new UserDAO();
 
-  def findById(userId: String): User=
-  {
-    val instance=new User()
-    instance
-  }
-  def isValidated(user: User): Boolean=
-  {
-     user.isValidated()
-  }
-
-  val getValidated=findById _  andThen ((_ : User).isValidated)
-}
