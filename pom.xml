@@ -115,7 +115,7 @@
                 <version>1.2</version>
                 <configuration>
                     <storetype>${project.storetype}</storetype>
-                    <keystore>src/main/resources/${project.keyStore}</keystore>
+                    <keystore>keystores/${project.keyStore}</keystore>
                     <alias>${project.alias}</alias>
                     <storepass>${project.password}</storepass>
                     <keypass>${project.keypass}</keypass>
