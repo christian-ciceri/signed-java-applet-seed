@@ -53,16 +53,28 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.keyStore>minimal-keystore.jks</project.keyStore>
         <project.password>abcd1234</project.password>
+        <project.keypass>abcd1234</project.keypass>
         <project.storetype>jks</project.storetype>
         <project.alias>minimal</project.alias>
     </properties>
     <profiles>
         <profile>
-            <id>dexeus</id>
+            <id>dexeus-trial</id>
             <properties>
                 <project.keyStore>dexeus.p12</project.keyStore>
                 <project.password>dexeusbcn</project.password>
+                <project.keypass>dexeusbcn</project.keypass>
                 <project.storetype>PKCS12</project.storetype>
+                <project.alias>bcn.dexeus.com</project.alias>
+            </properties>
+        </profile>
+        <profile>
+            <id>dexeus</id>
+            <properties>
+                <project.keyStore>dexeus.jks</project.keyStore>
+                <project.keypass>dexeusbcn</project.keypass>
+                <project.password>dexeusbcn</project.password>
+                <project.storetype>jks</project.storetype>
                 <project.alias>bcn.dexeus.com</project.alias>
             </properties>
         </profile>
@@ -97,7 +109,7 @@
                     <keystore>src/main/resources/${project.keyStore}</keystore>
                     <alias>${project.alias}</alias>
                     <storepass>${project.password}</storepass>
-                    <keypass>${project.password}</keypass>
+                    <keypass>${project.keypass}</keypass>
                 </configuration>
                 <executions>
                     <execution>
